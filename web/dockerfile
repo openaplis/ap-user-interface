@@ -1,0 +1,10 @@
+FROM nginx:latest
+
+# make some directories
+RUN mkdir -p /var/www/html
+
+# copy some files
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /var/www/html/index.html
+
+EXPOSE 9090
